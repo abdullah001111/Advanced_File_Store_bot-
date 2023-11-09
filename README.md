@@ -33,7 +33,7 @@
 #### Deploy on Render
 **<b>BEFORE DEPLOY ON RENDER, FORK REPO EDIT CONFIG, CREATE NEW WEB-SERVICE ADD VARIABLES AND ADD MONITOR THATS IT</b>
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://github.com/Sahil0976/Multi-ForceSub_2buttons)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Sahil0976/Multi-ForceSub_2buttons)
 
 ##
 #### Deploy in your VPS
