@@ -157,22 +157,6 @@ async def not_joined(client: Client, message: Message):
             ),
             reply_markup=reply_markup
         )
-       reply_markup = InlineKeyboardMarkup(buttons)
-
-    # Check if START_PIC is defined in the config and not empty
-    if START_PIC:
-        # Send photo with caption using START_MSG
-        await message.reply_photo(
-            photo=START_PIC,
-            caption=START_MSG.format(
-                first=message.from_user.first_name,
-                last=message.from_user.last_name,
-                username=None if not message.from_user.username else '@' + message.from_user.username,
-                mention=message.from_user.mention,
-                id=message.from_user.id
-            ),
-            reply_markup=reply_markup
-        )
     else:
         # Send text message with inline keyboard and other information
         await message.reply_text(
