@@ -81,19 +81,20 @@ async def start_command(client: Client, message: Message):
         return
     else:
         reply_markup = InlineKeyboardMarkup(
-            [
     [
-                    InlineKeyboardButton("​🇭​​🇪​​🇱​​🇵​", callback_data = "about")
-    ]
-[                   InlineKeyboardButton("🇨​​🇭​​🇦​​🇳​​🇳​​🇪​​🇱​", url="https://t.me/Anime_X_Hunters"),
-                    InlineKeyboardButton("ᴏɴɢᴏɪɴɢ", url="https://t.me/Ongoing_Anime_X_Hunter")
-            ]
-                
-                [
-                    InlineKeyboardButton("💥​🇨​​🇱​​🇴​​🇸​​🇪​💥", callback_data = "close")
+        [
+            InlineKeyboardButton("🇭​​🇪​​🇱​​🇵​", callback_data="about")
+        ],
+        [
+            InlineKeyboardButton("🇨​​🇭​​🇦​​🇳​​🇳​​🇪​​🇱​", url="https://t.me/Anime_X_Hunters"),
+            InlineKeyboardButton("ᴏɴɢᴏɪɴɢ", url="https://t.me/Ongoing_Anime_X_Hunter")
+        ],
+        [
+            InlineKeyboardButton("💥​🇨​​🇱​​🇴​​🇸​​🇪​💥", callback_data="close")
         ]
-            ]
-        )
+    ]
+)
+
         await message.reply_text(
             text = START_MSG.format(
                 first = message.from_user.first_name,
