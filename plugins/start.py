@@ -54,7 +54,7 @@ async def start_command(client: Client, message: Message):
         try:
             messages = await get_messages(client, ids)
         except:
-            await message.reply_text("​🇹​​🇭​​🇪​​🇷​​🇪​ ​🇮​​🇸​ ​🇩​​🇪​​🇫​​🇮​​🇳​​🇮​​🇹​​🇪​​🇱​​🇾​ ​🇸​​🇴​​🇲​​🇪​​🇹​​🇭​​🇮​​🇳​​🇬​ ​🇼​​🇷​​🇴​​🇳​​🇬​...!")
+            await message.reply_text("​​​Tʜᴇʀᴇ ɪꜱ ᴅᴇꜰɪɴɪᴛᴇʟʏ ꜱᴏᴍᴇᴛʜɪɴɢ ᴡʀᴏɴɢ​...!")
             return
         await temp_msg.delete()
 
@@ -83,14 +83,14 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("🇭​​🇪​​🇱​​🇵​", callback_data="about")
+            InlineKeyboardButton("ʜᴇʟᴘ​", callback_data="about")
         ],
         [
-            InlineKeyboardButton("🇨​​🇭​​🇦​​🇳​​🇳​​🇪​​🇱​", url="https://t.me/Anime_X_Hunters"),
+            InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/Anime_X_Hunters"),
             InlineKeyboardButton("ᴏɴɢᴏɪɴɢ", url="https://t.me/Ongoing_Anime_X_Hunter")
         ],
         [
-            InlineKeyboardButton("💥​🇨​​🇱​​🇴​​🇸​​🇪​💥", callback_data="close")
+            InlineKeyboardButton("💥ᴄʟᴏꜱᴇ💥", callback_data="close")
         ]
     ]
 )
