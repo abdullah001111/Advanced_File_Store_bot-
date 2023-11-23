@@ -54,7 +54,7 @@ async def start_command(client: Client, message: Message):
         try:
             messages = await get_messages(client, ids)
         except:
-            await message.reply_text("I Feel like there is Something wrong..!")
+            await message.reply_text("​🇹​​🇭​​🇪​​🇷​​🇪​ ​🇮​​🇸​ ​🇩​​🇪​​🇫​​🇮​​🇳​​🇮​​🇹​​🇪​​🇱​​🇾​ ​🇸​​🇴​​🇲​​🇪​​🇹​​🇭​​🇮​​🇳​​🇬​ ​🇼​​🇷​​🇴​​🇳​​🇬​...!")
             return
         await temp_msg.delete()
 
@@ -83,13 +83,15 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
     [
-        InlineKeyboardButton("Programmed By", url="https://t.me/Its_Tartaglia_Childe"),
-    ],
-    [
-                    InlineKeyboardButton("⚠️ Anilist ⚠️", callback_data = "about"),
-                    InlineKeyboardButton("✌️ Close ✌️", callback_data = "close")
-        
+                    InlineKeyboardButton("​🇭​​🇪​​🇱​​🇵​", callback_data = "about")
     ]
+[                   InlineKeyboardButton("🇨​​🇭​​🇦​​🇳​​🇳​​🇪​​🇱​", url="https://t.me/Anime_X_Hunters"),
+                    InlineKeyboardButton("ᴏɴɢᴏɪɴɢ", url="https://t.me/Ongoing_Anime_X_Hunter")
+            ]
+                
+                [
+                    InlineKeyboardButton("💥​🇨​​🇱​​🇴​​🇸​​🇪​💥", callback_data = "close")
+        ]
             ]
         )
         await message.reply_text(
@@ -121,8 +123,8 @@ REPLY_ERROR = "<code>Use this command as a reply to any telegram message without
 async def not_joined(client: Client, message: Message):
     buttons = [
         [
-            InlineKeyboardButton(text="💞My Channel💞", url=client.invitelink),
-            InlineKeyboardButton(text="💞Group💞", url=client.invitelink2),
+            InlineKeyboardButton(text="⛩️ᴄʜᴀɴɴᴇʟ⛩️", url=client.invitelink),
+            InlineKeyboardButton(text="⚡ɢʀᴏᴜᴘ⚡", url=client.invitelink2),
         ]
     ]
     try:
