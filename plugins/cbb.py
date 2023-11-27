@@ -10,7 +10,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "help":
         await query.message.edit_text(
-            text = f"@Anime_X_hunters_bot is a Telegram Bot for storing posts or files that can be accessed via a special link.\n\n• Creator: @Its_Tartaglia_Childe\n• Framework: Pyrograms\n• Channel : @Animes_X_Hunters\n\n👨‍💻 Developed by @Animes_X_Hunters",
+            text = f"<b>Bot Cammands\n❏ Commands For BOT Admins\n├/start : start the bot or get posts\n├/batch : create link for more than one posts\n├/genlink : create link for one post\n/users : view bot statistics\n/broadcast : broadcast any messages to bot users\n/stats : checking your bot uptime\n👨‍💻 Developed by <a href=https://t.me/Anime_X_Hunters>Anime X Hunters</a></b>",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
