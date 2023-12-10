@@ -6,4 +6,4 @@ pyromod==1.5
 pymongo==4.0.2
 dnspython==2.3.0
 # --- For-Web-Response ------- #
-aiohttp==3.8.4
+aiohttp
