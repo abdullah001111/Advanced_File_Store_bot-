@@ -103,18 +103,20 @@ async def start_command(client: Client, message: Message):
         # Add image URL for the start message
         img_url = "https://telegra.ph/file/e3564748e942326e3dae0.jpg"
 
-        await message.reply_text(
-            text=START_MSG.format(
-                first=message.from_user.first_name,
-                last=message.from_user.last_name,
-                username=None if not message.from_user.username else '@' + message.from_user.username,
-                mention=message.from_user.mention,
-                id=message.from_user.id
-            ),
-            reply_markup=reply_markup,
-            disable_web_page_preview=True,
-            quote=True,
-            photo=img_url
+        await message.reply_photo(
+    photo=img_url,
+    caption=START_MSG.format(
+        first=message.from_user.first_name,
+        last=message.from_user.last_name,
+        username=None if not message.from_user.username else '@' + message.from_user.username,
+        mention=message.from_user.mention,
+        id=message.from_user.id
+    ),
+    reply_markup=reply_markup,
+    disable_web_page_preview=True,
+    quote=True
+        
+        
         )
         return
 
