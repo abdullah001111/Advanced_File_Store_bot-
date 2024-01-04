@@ -22,7 +22,7 @@ async def start_command(client: Client, message: Message):
         except:
             pass
     text = message.text
-    if len(text) > 7:
+    if len(text)>7:
         try:
             base64_string = text.split(" ", 1)[1]
         except:
@@ -36,7 +36,7 @@ async def start_command(client: Client, message: Message):
             except:
                 return
             if start <= end:
-                ids = range(start, end + 1)
+                ids = range(start,end+1)
             else:
                 ids = []
                 i = start
@@ -54,15 +54,15 @@ async def start_command(client: Client, message: Message):
         try:
             messages = await get_messages(client, ids)
         except:
-            await message.reply_text("Tʜᴇʀᴇ ɪꜱ ᴅᴇꜰɪɴɪᴛᴇʟʏ ꜱᴏᴍᴇᴛʜɪɴɢ ᴡʀᴏɴɢ...!")
+            await message.reply_text("​​​Tʜᴇʀᴇ ɪꜱ ᴅᴇꜰɪɴɪᴛᴇʟʏ ꜱᴏᴍᴇᴛʜɪɴɢ ᴡʀᴏɴɢ​...!")
             return
         await temp_msg.delete()
 
         for msg in messages:
+
             if bool(CUSTOM_CAPTION) & bool(msg.document):
-                caption = CUSTOM_CAPTION.format(previouscaption="" if not msg.caption else msg.caption.html,
-                                                filename=msg.document.file_name)
-            else: 
+                caption = CUSTOM_CAPTION.format(previouscaption = "" if not msg.caption else msg.caption.html, filename = msg.document.file_name)
+            else:
                 caption = "" if not msg.caption else msg.caption.html
 
             if DISABLE_CHANNEL_BUTTON:
@@ -70,58 +70,88 @@ async def start_command(client: Client, message: Message):
             else:
                 reply_markup = None
 
-            # Add image URL for the start message
-            img_url = "https://telegra.ph/file/e3564748e942326e3dae0.jpg"
-
             try:
-                await msg.copy(chat_id=message.from_user.id, caption=caption, parse_mode=ParseMode.HTML,
-                               reply_markup=reply_markup, protect_content=PROTECT_CONTENT, photo=img_url)
+                await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
                 await asyncio.sleep(0.5)
             except FloodWait as e:
                 await asyncio.sleep(e.x)
-                await msg.copy(chat_id=message.from_user.id, caption=caption, parse_mode=ParseMode.HTML,
-                               reply_markup=reply_markup, protect_content=PROTECT_CONTENT, photo=img_url)
+                await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
             except:
                 pass
         return
     else:
         reply_markup = InlineKeyboardMarkup(
+    [
+        [
+            InlineKeyboardButton("ʜᴇʟᴘ​", callback_data="help")
+        ],
+        [
+            InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/Anime_Mayhem"),
+            InlineKeyboardButton("ᴏɴɢᴏɪɴɢ", url="https://t.me/Ongoing_Anime_Mayhem")
+        ],
+        [
+            InlineKeyboardButton("💥ᴄʟᴏꜱᴇ💥", callback_data="close")
+        ]
+    ]
+)
+
+        await message.reply_text(
+            text = START_MSG.format(
+                first = message.from_user.first_name,
+                last = message.from_user.last_name,
+                username = None if not message.from_user.username else '@' + message.from_user.username,
+                mention = message.from_user.mention,
+                id = message.from_user.id
+            ),
+            reply_markup = reply_markup,
+            disable_web_page_preview = True,
+            quote = True
+        )
+        return   
+
+
+#=====================================================================================##
+
+WAIT_MSG = "<b>Working....</b>"
+
+REPLY_ERROR = "<code>Use this command as a reply to any telegram message without any spaces.</code>"
+
+#=====================================================================================##
+
+    
+    
+@Bot.on_message(filters.command('start') & filters.private)
+async def not_joined(client: Client, message: Message):
+    buttons = [
+        [
+            InlineKeyboardButton(text="⛩️Cʜᴀɴɴᴇʟ 𝟷⛩️", url=client.invitelink),
+            InlineKeyboardButton(text="⚡Cʜᴀɴɴᴇʟ 𝟸⚡", url=client.invitelink2),
+        ]
+    ]
+    try:
+        buttons.append(
             [
-                [
-                    InlineKeyboardButton("ʜᴇʟᴘ", callback_data="help")
-                ],
-                [
-                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/Anime_Mayhem"),
-                    InlineKeyboardButton("ᴏɴɢᴏɪɴɢ", url="https://t.me/Ongoing_Anime_Mayhem")
-                ],
-                [
-                    InlineKeyboardButton("💥ᴄʟᴏꜱᴇ💥", callback_data="close")
-                ]
+                InlineKeyboardButton(
+                    text='Rᴇʟᴏᴀᴅ',
+                    url=f"https://t.me/{client.username}?start={message.command[1]}"
+                )
             ]
         )
+    except IndexError:
+        pass
 
-        # Add image URL for the start message
-        img_url = "https://telegra.ph/file/e3564748e942326e3dae0.jpg"
-
-        await message.reply_photo(
-    photo=img_url,
-    caption=START_MSG.format(
-        first=message.from_user.first_name,
-        last=message.from_user.last_name,
-        username=None if not message.from_user.username else '@' + message.from_user.username,
-        mention=message.from_user.mention,
-        id=message.from_user.id
-    ),
-    reply_markup=reply_markup,
-    quote=True
-        
-        
-        
-        
-        )
-        return
-
-
+    await message.reply(
+        text=FORCE_MSG.format(
+            first=message.from_user.first_name,
+            last=message.from_user.last_name,
+            username=None if not message.from_user.username else '@' + message.from_user.username,
+            mention=message.from_user.mention,
+            id=message.from_user.id
+        ),
+        reply_markup=InlineKeyboardMarkup(buttons),
+        quote=True,
+        disable_web_page_preview=True
+    )
 @Bot.on_message(filters.command('users') & filters.private & filters.user(ADMINS))
 async def get_users(client: Bot, message: Message):
     msg = await client.send_message(chat_id=message.chat.id, text=WAIT_MSG)
