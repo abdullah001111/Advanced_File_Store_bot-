@@ -6,9 +6,8 @@
 
 ##
 
-**Credit - [@CodeXbotz](https://t.me/CodeXBotz)** [@Anime_X_Hunters](https://t.me/Anime_X_Hunters)**
-[@Mayhem_Bots]
-[https://t.me/Mayhem_Bots]**
+**Credit - [@CodeXbotz](https://t.me/CodeXBotz)**
+[@Anime_X_Hunters](https://t.me/Anime_X_Hunters) & [@Mayhem_Bots][https://t.me/Mayhem_Bots]**
 
 
 
