@@ -1,4 +1,4 @@
-# Nozel's-file-sharing-Modified
+# Hunters & Mayhem's-file-sharing-Modified
 
 ![image](https://github.com/Sahil0976/MultiForce-Sub/assets/97865856/c9cd46d1-e48d-4276-9b39-ac8e3d08ffc4)
 
@@ -7,12 +7,12 @@
 ##
 
 **Credit - [@CodeXbotz](https://t.me/CodeXBotz)**
-[@Anime_X_Hunters](https://t.me/Anime_X_Hunters) & [@Mayhem_Bots][https://t.me/Mayhem_Bots]**
+[@Anime_X_Hunters](https://t.me/Anime_X_Hunters) & [@Mayhem_Bots](https://t.me/Mayhem_Bots)**
 
 
 
 ### Features
-- Multi Force Sub Modified Of CodeXBotz Created By - [@Its_Tagtaglia_Childe](https://t.me/Its_Tartaglia_Childe)**
+- Multi Force Sub Modified Of CodeXBotz Created By - [@Its_Oreki_Hotarou](https://t.me/@Its_Oreki_Hotarou) & [@Eren_is_Yeager](https://t.me/Eren_is_Yeager)**
 - Fully customisable.
 - Customisable welcome & Forcesub messages.
 - More than one Posts in One Link.
@@ -49,17 +49,12 @@ python3 main.py
 ### Admin Commands
 
 ```
-/start - start the bot or get posts
-
-/batch - create link for more than one posts
-
-/genlink - create link for one post
-
-/users - view bot statistics
-
-/broadcast - broadcast any messages to bot users
-
-/stats - checking your bot uptime
+start - start the bot or get posts
+batch - create link for more than one posts
+genlink - create link for one post
+users - view bot statistics
+broadcast - broadcast any messages to bot users
+stats - checking your bot uptime
 ```
 
 ### Variables
