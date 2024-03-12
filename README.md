@@ -7,12 +7,12 @@
 ##
 
 **Credit - [@CodeXbotz](https://t.me/CodeXBotz)**
-**[@Anime_X_Hunters](https://t.me/Anime_X_Hunters) & [@Mayhem_Bots](https://t.me/Mayhem_Bots)**
+**[@Mayhem_Bots](https://t.me/Mayhem_Bots)**
 
 
 
 ### Features
-- Multi Force Sub Modified Of CodeXBotz Created By - **[@Its_Oreki_Hotarou](https://t.me/@Its_Oreki_Hotarou) & [@Eren_is_Yeager](https://t.me/Eren_is_Yeager)**
+- Multi Force Sub Modified Of CodeXBotz Created By - **[@Its_Abdullaah](https://t.me/Its_Abdullaah)**
 - Fully customisable.
 - Customisable welcome & Forcesub messages.
 - More than one Posts in One Link.
